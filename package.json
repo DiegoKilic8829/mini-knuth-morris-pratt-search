@@ -1,0 +1,17 @@
+{
+  "name": "mini-knuth-morris-pratt-search",
+  "version": "0.1.0",
+  "description": "Finds substring occurrences using the Knuth-Morris-Pratt prefix function to skip ahead on mismatches.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "dependencies": {}
+}
