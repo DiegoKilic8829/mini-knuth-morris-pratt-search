@@ -28,3 +28,10 @@ The trade-off: the prefix function and per-character loop add constant overhead,
 - `kmpSearch(text, pattern)` → `number` — first match index, or `-1`.
 - `kmpSearchAll(text, pattern)` → `number[]` — all match indices in ascending order.
 - `buildPrefixFunction(pattern)` → `number[]` — exposed for inspection/testing.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
